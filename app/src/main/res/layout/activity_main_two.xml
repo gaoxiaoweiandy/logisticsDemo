@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/rl_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="1"
+                android:textSize="13sp"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:id="@+id/view_line_color"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="9dp"
+                android:background="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+        <!--融资审批流程适配器-->
+        <RelativeLayout
+            android:id="@+id/rl_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="22dp"
+            android:background="@color/colorAccent"
+            tools:ignore="RtlHardcoded,UselessParent">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="14dp"
+                tools:ignore="RtlHardcoded,UselessLeaf">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="合同发起"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:text="状态"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="曲丽丽"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="申请资质符合要求，同意融资申请。"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="2019-10-10 09:20"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

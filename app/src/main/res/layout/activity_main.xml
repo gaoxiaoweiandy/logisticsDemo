@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="com.wang.logisticsprocessdemo.MainActivity">
+    <HorizontalScrollView
+        android:background="@color/green"
+        android:id="@+id/horizontal_scroll_view"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.wang.logisticsprocessdemo.LogisticsView3
+                android:id="@+id/logisticsView"
+                app:nodeRadius="5dp"
+                app:width="2dp"
+                app:height="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
