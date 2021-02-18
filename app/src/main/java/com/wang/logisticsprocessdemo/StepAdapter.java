@@ -3,10 +3,10 @@ package com.wang.logisticsprocessdemo;
 import java.util.List;
 
 /**
- * User: 734238158@qq.com
- * Date: 2018-01-27
+ * xw.gao
+ * 物流各阶段的节点个数与要显示的文本数据
  */
-public interface LogisticsAdapter {
+public interface StepAdapter {
 
     /**
      * 返回集合大小
@@ -18,6 +18,6 @@ public interface LogisticsAdapter {
      * 适配数据的集合
      * @return
      */
-    List<LogisticsData> getData();
+    List<StepData> getData();
 
 }
