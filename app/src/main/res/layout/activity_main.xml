@@ -13,10 +13,10 @@
         android:layout_height="wrap_content">
             <com.wang.logisticsprocessdemo.StepView
                 android:id="@+id/stepView"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="16dp"
-                app:nodeRadius="5"
-                app:line_height="5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:nodeRadius="2"
+                app:line_height="2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
     </HorizontalScrollView>

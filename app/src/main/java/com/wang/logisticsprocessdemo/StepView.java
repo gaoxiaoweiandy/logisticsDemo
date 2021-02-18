@@ -17,8 +17,9 @@ public class StepView extends View {
     float mNodeRadius;  //圆形节点中 最内（最小）的那个圆的半径
     int mNodeDistance;//圆形节点间隔距离
     int mLeft;   //第1个节点的圆心x坐标, 必须得有，且必须大于某个值，在此为20dp，否则绘制文字时有可能溢出左边界
-    int mTop;   //圆心距离父容器的上边距，必须有，且必须大于某个值，在此为100dp，否则绘制文字时有可能溢出上边界
+    int mTop;   //线段距离父容器的上边距，必须有，且必须大于某个值，在此为100dp，否则绘制文字时有可能溢出上边界
     int mSelectPosition = 0; //默认第一个节点被选中
+    int mTextY; //文本与线段上边缘的margin
 
     public StepView(Context context) {
         super(context);
@@ -56,10 +57,12 @@ public class StepView extends View {
         mNodeDistance = typedArray.getInt(R.styleable.LogisticsView_nodeDistance, 60);
         mNodeDistance = Dp2pxUtils.dip2px(mContext, mNodeDistance);
 
-
+        //边距，left是第一个节点的圆心x坐标，top是线段上边缘距离父容器的顶部边距
         mLeft = Dp2pxUtils.dip2px(mContext, 20);
         mTop = Dp2pxUtils.dip2px(mContext, 30);
 
+        //文本标注距离 “线段矩形”上边缘的距离
+        mTextY = (int) ((mTop - mNodeRadius * 2) - Dp2pxUtils.dip2px(mContext, 6));
         //创建画笔
         initPaint();
     }
@@ -118,7 +121,7 @@ public class StepView extends View {
             mPaint.setTextSize(Dp2pxUtils.dip2px(mContext, 14));
             String text = ((StepData) data.get(i)).getStepText();
             int x = (int) ((i * mNodeDistance + mLeft) - (mPaint.measureText(text) / 2));
-            canvas.drawText(((StepData) data.get(i)).getStepText() + "", x, mTop - mNodeRadius * 2 - 10, mPaint);
+            canvas.drawText(((StepData) data.get(i)).getStepText() + "", x,mTextY , mPaint);
 
             //每1个节点由3个同心圆组成，每个圆的透明度不同，最初为纯蓝色
             //第1个圆,不透明
